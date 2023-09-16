@@ -1,0 +1,415 @@
+/* RESET */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+input,
+textarea,
+button {
+   font: inherit;
+}
+
+/* UTILITY CLASSES */
+
+.offscreen {
+    position: absolute;
+    left: -1000000px;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* VARIABLES */
+
+:root {
+    /* COLORS */
+    --NETFLIX_COLOR:#E50914;
+    --FC: #eee;
+    --DARKBG_COLOR: #000;
+
+    /* FONTS */
+
+
+    /* PADDING */
+}
+
+/* GENERAL STYLES */
+html {
+    color: var(--FC);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: #999999;
+    text-decoration: underline;
+}
+/* HEADER */
+
+.header {
+    background-color: #eee;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.507)), url(images/header-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    padding: 10px 8%;
+}
+
+.banner__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner__section__figure {
+    width: 120px;
+    cursor: pointer;
+}
+
+.banner__section__button {
+    padding: 8px 16px;
+    border-radius: 3px;
+    background-color: var(--NETFLIX_COLOR);
+    border-width: 0;
+    font-weight: normal;
+    color: inherit;
+}
+
+.english {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.english span {
+    width: 12px;
+}
+
+.con {
+    display: flex;
+    gap: 10px;
+}
+
+.content__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.banner__content__h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.banner__content__p {
+    font-weight: 400;
+    margin-bottom: 20px; 
+} 
+
+.form__wrapper {
+    max-width: 650px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.banner__content__form {
+    flex: 1;
+    display: flex;
+}
+
+.banner__content__input {
+    flex: 1;
+    padding: .5rem 0;
+    padding-left: .5rem;
+    border-width: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.form__button {
+    color: white;
+    background-color: var(--NETFLIX_COLOR);
+    border-width: 0;
+    padding: 0 16px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+
+/* FEATURES */
+
+.figure-con .figure {
+    width: 100%;
+}
+
+hr {
+    height: 8px;
+    background-color: rgb(39, 39, 39);
+    border: none;
+}
+
+.wrapper {
+    padding: 4.5rem 4%;
+    display: flex;
+    /* gap: 10px; */
+    
+}
+
+.text {
+    width: 40%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.figure-con {
+    width: 40%;
+    flex: 1;
+}
+
+.text h2 {
+    font-size: 3rem;
+}
+
+.text p {
+    font-size: 1.5rem;
+}
+
+.alternate {
+    order: -1;
+}
+
+/* FAQ */
+
+.faq__h2 {
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 1rem;
+} 
+
+.accordion {
+    margin: 60px auto;
+    max-width: 750px;
+}
+
+.accordion__each label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+
+.accordion__each label::after {
+    content: '+';
+    font-size: 30px;
+    font-weight: 900;
+    transition: all 0.2s;
+}
+
+input:checked + label::after {
+    transform: rotate(45deg);
+}
+
+.accordion__each input {
+    display: none;
+}
+
+.accordion__each p {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #303030;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    transition: all 0.5s ease;
+}
+
+.accordion__each input[type="radio"]:checked ~ p {
+    max-height: 500px;
+    padding: 20px;
+}
+
+.small {
+    text-align: center;
+    font-size: 13px;
+}
+
+.nf {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+/* FOOTER */
+footer {
+    max-width: 100%;
+    margin: 0 10%;
+    margin-bottom: 10px;
+}
+
+footer h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+footer .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.last-button {
+    color: #999999;
+    border: 1px solid #999999;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    color: #999999;
+}
+
+/*----------------media queries----------*/
+
+@media screen and (max-width: 600px) {
+    .header {
+        padding-left: 4%;
+        padding-right: 4%; 
+    }
+
+    .banner__section__figure {
+        width: 90px;
+    }
+
+    .banner__section__button {
+        padding: 4px 8px;
+    }
+    .content__wrapper {
+        position: unset;
+        transform: unset;
+        margin-top: 170px;
+    }
+    
+    .banner__content__h1 {
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    
+    .form__button {
+        padding: 0 6px;
+    }
+    .wrapper {
+        flex-direction: column;
+        padding: 4.5rem 10%;
+    }
+    .text {
+        width: 100%;
+       /*  flex-direction: column;
+        justify-content: center; */
+    }
+    
+    .figure-con {
+        width: 100%;
+        flex: 1;
+    }
+    
+    .text h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .text p {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    .alternate {
+        order: 0;
+    }
+    .faq__h2 {
+        font-weight: 700;
+        font-size: 2rem; 
+    } 
+    .accordion {
+        margin: 30px 0;
+        width: 100%;
+    }
+    .faq {
+        padding: 0 5%;
+    }
+    .small {
+        font-size: 1.3rem;
+    }
+    .accordion__each label, .accordion__each p {
+        font-size: 18px;
+    }
+    .accordion__each label::after {
+        font-size: 20px;
+    }
+    .nf  .banner__content__input{
+        background-color: #222222b9;
+    }
+    .form__wrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .form__button {
+        align-self: center;
+        padding: 1rem;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    .banner__content__input {
+        background-color: #0c0c0cb9;
+        padding: 1rem;
+    }
+    footer {
+        max-width: 100%;
+        margin: 0 10%;
+    }
+    footer h2 {
+        font-size: 1rem;
+    }
+    footer .row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
